@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #3498db;
+    --bg-primary-color:#5467cd;
+    --text-color: #333;
+}
+
+header{
+    background-color: var(--bg-primary-color);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+nav ul{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 2rem 0 2rem;
+}
+
+nav ul li{
+    list-style: none;
+    text-decoration: none;
+
+
+}
