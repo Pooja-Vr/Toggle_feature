@@ -15,16 +15,14 @@ header{
 }
 
 .navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
 }
 
 nav ul{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
     gap: 1.5rem;
     padding: 0 2rem 0 2rem;
 }
@@ -34,4 +32,49 @@ nav ul li{
     text-decoration: none;
 
 
+}
+
+
+/* =============== home-info styling ================= */
+.home-info{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 4rem;
+    gap: 6rem;
+}
+
+.home-right{
+    grid-column: 1;
+    /* gap: 2rem; */
+    padding: 2rem;
+}
+
+.home-right h1 span{
+    color: var(--primary-color);
+    
+}
+
+
+/* ============== Media query ======== */
+@media (max-width: 768px) {
+    .navbar {
+        grid-template-columns: repeat(1, 1fr);
+
+
+    }
+
+    nav ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 468px){
+    .navbar {
+        grid-template-columns: repeat(1, 1fr);
+
+
+    }
+    nav ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
