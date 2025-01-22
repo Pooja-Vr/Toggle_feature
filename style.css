@@ -118,4 +118,20 @@ nav ul li a{
     nav ul{
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .toggle-button{
+        height: 2rem;
+    }
+
+    .toggle-btn{
+        width: 3.2rem;
+        height: 1.7rem;
+        top: -.4rem;
+        left: 2rem;  
+    }
+
+    .toggle-ball{
+        width: 1.3rem;
+        height: 1.3rem;
+    }
 }
