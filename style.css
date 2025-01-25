@@ -4,14 +4,8 @@
     box-sizing: border-box;
 }
 /* ============== STYLING FOR DARK MODE =========== */
-/* .dark-mode {
-    --primary-color: #1e1f20;
-    --bg-primary-color:#b5cd54;
-    --text-color: #f5f0f0;
-} */
-
 :root .dark-mode{
-    --primary-color: #1e1f20;
+    --primary-color: #404244;
     --bg-primary-color:#b5cd54;
     --text-color: #f5f0f0;
 }
@@ -51,8 +45,8 @@ header .dark-mode{
 
 /* =================== FOR LIGHT MODE =============== */
 :root{
-    --primary-color: #3498db;
-    --bg-primary-color:#5467cd;
+    --primary-color: #1e7ab6;
+    --bg-primary-color:#9ea2bb;
     --text-color: #333;
 }
 
@@ -63,7 +57,7 @@ body{
 }
 
 header{
-    background-color: var(--bg-primary-color);
+    background-color: #9296ae;
 }
 
 .navbar{
@@ -71,6 +65,23 @@ header{
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
     align-items: center;
+    
+}
+
+.navbar h1{
+    /* color: var(--primary-color); */
+    color: var(--text-color);
+    font-size: 1.7rem;
+}
+
+nav{
+    display: flex;
+    /* justify-content: flex-end; */
+}
+
+nav li{
+    list-style: none;
+    text-align: center;
 }
 
 nav ul{
@@ -87,7 +98,7 @@ nav ul li{
 
 nav ul li a{
     color: var(--text-color);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-decoration: none;
     align-items: center;
 }
@@ -138,7 +149,7 @@ nav ul li a{
 .home-info{
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 4rem;
+    padding: 2rem;
     gap: 6rem;
 }
 
@@ -159,9 +170,11 @@ nav ul li a{
         grid-template-columns: repeat(1, 1fr);
     }
 
-    nav ul{
+    nav ul li{
         grid-template-columns: repeat(3, 1fr);
+        visibility: hidden;
     }
+    
 
     .toggle-button{
         height: 2rem;
@@ -170,8 +183,8 @@ nav ul li a{
     .toggle-btn{
         width: 3.2rem;
         height: 1.7rem;
-        top: -.4rem;
-        left: 2rem;  
+        top: -1.6rem;
+        left: -2rem;  
     }
 
     .toggle-ball{
@@ -190,6 +203,11 @@ nav ul li a{
         grid-template-columns: repeat(2, 1fr);
     }
 
+    nav ul li{
+        grid-template-columns: repeat(3, 1fr);
+        visibility: hidden;
+    }
+
     .toggle-button{
         height: 2rem;
     }
@@ -197,8 +215,8 @@ nav ul li a{
     .toggle-btn{
         width: 3.2rem;
         height: 1.7rem;
-        top: -.4rem;
-        left: 2rem;  
+        top: -1.4.5rem;
+        left: 1rem;  
     }
 
     .toggle-ball{
