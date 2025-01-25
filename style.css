@@ -3,11 +3,63 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* ============== STYLING FOR DARK MODE =========== */
+/* .dark-mode {
+    --primary-color: #1e1f20;
+    --bg-primary-color:#b5cd54;
+    --text-color: #f5f0f0;
+} */
 
+:root .dark-mode{
+    --primary-color: #1e1f20;
+    --bg-primary-color:#b5cd54;
+    --text-color: #f5f0f0;
+}
+
+body.dark-mode{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.dark-mode .navbar{
+    background-color: var(--primary-color);
+}
+
+header .dark-mode{
+    background-color: var(--primary-color);
+}
+
+.dark-mode  a{
+    color:var(--text-color);
+}
+
+.dark-mode .toggle-btn{
+    background-color: #fff;
+}
+
+.dark-mode .toggle-ball{
+    background-color: #131414;
+}
+
+.dark-mode .home-info{
+    background-color: #131414;
+}
+
+.dark-mode .home-right h1 span{
+    color: #b5cd54;
+}
+
+/* =================== FOR LIGHT MODE =============== */
 :root{
     --primary-color: #3498db;
     --bg-primary-color:#5467cd;
     --text-color: #333;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-primary-color);
+    color: var(--text-color);
 }
 
 header{
@@ -42,7 +94,6 @@ nav ul li a{
 
 .toggle-button{
     height: 2.5rem;
-    /* background: #5c3131; */
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -56,8 +107,8 @@ nav ul li a{
 
 .toggle-btn{
     display:inline-block;
-    width: 4rem;
-    height: 2.1rem;
+    width: 3rem;
+    height: 1.7rem;
     background-color: #131414;
     position: relative;
     top: -.5rem;
@@ -66,17 +117,24 @@ nav ul li a{
 }
 
 .toggle-ball{
-    width: 1.7rem;
-    height: 1.7rem;
+    width: 1.3rem;
+    height: 1.3rem;
     position: absolute;
     top: .2rem;
     left: .2rem;
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
+    transition: transform .3s linear;
 }
 
-/* =============== home-info styling ================= */
+/* button was moving when clicked "+" operator is used for adjecent sibiling combinator */
+#check:checked + .toggle-btn .toggle-ball{
+    background-color: var(--primary-color);
+    transform: translateX(1.4rem);
+}
+
+/* ======== home-info styling ========= */
 .home-info{
     display:grid;
     grid-template-columns: repeat(2, 1fr);
@@ -86,7 +144,6 @@ nav ul li a{
 
 .home-right{
     grid-column: 1;
-    /* gap: 2rem; */
     padding: 2rem;
 }
 
@@ -96,16 +153,30 @@ nav ul li a{
 }
 
 
-/* ============== Media query ======== */
+/* ========== Media query ======== */
 @media (max-width: 768px) {
     .navbar {
         grid-template-columns: repeat(1, 1fr);
-
-
     }
 
     nav ul{
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .toggle-button{
+        height: 2rem;
+    }
+
+    .toggle-btn{
+        width: 3.2rem;
+        height: 1.7rem;
+        top: -.4rem;
+        left: 2rem;  
+    }
+
+    .toggle-ball{
+        width: 1.3rem;
+        height: 1.3rem;
     }
 }
 
