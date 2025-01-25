@@ -163,6 +163,40 @@ nav ul li a{
     
 }
 
+.about{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+
+.skills{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+.skills-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+
+}
+
+.skills-list{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: .5rem 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: .5rem;
+
+}
+
 
 /* ========== Media query ======== */
 @media (max-width: 768px) {
