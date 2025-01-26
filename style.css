@@ -1,123 +1,120 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /* ============== STYLING FOR DARK MODE =========== */
-:root .dark-mode{
+:root .dark-mode {
     --primary-color: #404244;
-    --bg-primary-color:#b5cd54;
+    --bg-primary-color: #b5cd54;
     --text-color: #f5f0f0;
 }
 
-body.dark-mode{
+body.dark-mode {
     background-color: var(--primary-color);
     color: var(--text-color);
 }
 
-.dark-mode .navbar{
+.dark-mode .navbar {
     background-color: var(--primary-color);
 }
 
-header .dark-mode{
+header .dark-mode {
     background-color: var(--primary-color);
 }
 
-.dark-mode  a{
-    color:var(--text-color);
+.dark-mode a {
+    color: var(--text-color);
 }
 
-.dark-mode .toggle-btn{
+.dark-mode .toggle-btn {
     background-color: #fff;
 }
 
-.dark-mode .toggle-ball{
+.dark-mode .toggle-ball {
     background-color: #131414;
 }
 
-.dark-mode .home-info{
+.dark-mode .home-info {
     background-color: #131414;
 }
 
-.dark-mode .home-right h1 span{
+.dark-mode .home-right h1 span {
     color: #b5cd54;
 }
 
 /* =================== FOR LIGHT MODE =============== */
-:root{
+:root {
     --primary-color: #1e7ab6;
-    --bg-primary-color:#9ea2bb;
+    --bg-primary-color: #9ea2bb;
     --text-color: #333;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-primary-color);
     color: var(--text-color);
 }
 
-header{
+header {
     background-color: #9296ae;
 }
 
-.navbar{
-    display:grid;
+.navbar {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
     align-items: center;
-    
 }
 
-.navbar h1{
-    /* color: var(--primary-color); */
+.navbar h1 {
     color: var(--text-color);
     font-size: 1.7rem;
 }
 
-nav{
+nav {
     display: flex;
-    /* justify-content: flex-end; */
 }
 
-nav li{
+nav li {
     list-style: none;
     text-align: center;
 }
 
-nav ul{
-    display:grid;
-    grid-template-columns:repeat(6, 1fr);
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     gap: 1.5rem;
     padding: 0 2rem 0 2rem;
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
     text-align: center;
 }
 
-nav ul li a{
+nav ul li a {
     color: var(--text-color);
     font-size: 1.2rem;
     text-decoration: none;
     align-items: center;
 }
 
-.toggle-button{
+.toggle-button {
     height: 2.5rem;
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
-#check{
+#check {
     visibility: hidden;
     position: absolute;
-
 }
 
-.toggle-btn{
-    display:inline-block;
+.toggle-btn {
+    display: inline-block;
     width: 3rem;
     height: 1.7rem;
     background-color: #131414;
@@ -127,7 +124,7 @@ nav ul li a{
     cursor: pointer;
 }
 
-.toggle-ball{
+.toggle-ball {
     width: 1.3rem;
     height: 1.3rem;
     position: absolute;
@@ -139,122 +136,117 @@ nav ul li a{
     transition: transform .3s linear;
 }
 
-/* button was moving when clicked "+" operator is used for adjecent sibiling combinator */
-#check:checked + .toggle-btn .toggle-ball{
+#check:checked + .toggle-btn .toggle-ball {
     background-color: var(--primary-color);
     transform: translateX(1.4rem);
 }
 
 /* ======== home-info styling ========= */
-.home-info{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
+.home-info {
+    display: grid;
+    align-items: center;
+    justify-content: center;
     padding: 2rem;
-    gap: 6rem;
 }
 
-.home-right{
+.home-right {
     grid-column: 1;
     padding: 2rem;
 }
 
-.home-right h1 span{
+.home-right h1 span {
     color: var(--primary-color);
-    
 }
 
-.about{
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    text-align: center;
-    align-items: center;
+button {
+    margin: auto;
 }
 
-
-.skills{
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    text-align: center;
-    align-items: center;
-}
-
-.skills-list{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-top: 1rem;
-
-}
-
-.skills-list{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    padding: .5rem 1rem;
+.contact-btn {
     background-color: var(--primary-color);
     color: #fff;
+    padding: .5rem;
     border-radius: .5rem;
-
+    margin-top: 1.5rem;
 }
 
+.contact-btn:hover {
+    background-color: #1a6fa7;
+}
+
+.contact-btn a {
+    color: #fff;
+    text-decoration: none;
+}
 
 /* ========== Media query ======== */
 @media (max-width: 768px) {
     .navbar {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
+        /* margin-bottom: 2rem; */
+        align-items: center;
     }
 
-    nav ul li{
+    nav ul li {
         grid-template-columns: repeat(3, 1fr);
         visibility: hidden;
     }
-    
 
-    .toggle-button{
+    .toggle-button {
         height: 2rem;
     }
 
-    .toggle-btn{
+    .toggle-btn {
         width: 3.2rem;
         height: 1.7rem;
         top: -1.6rem;
-        left: -2rem;  
+        left: -2rem;
     }
 
-    .toggle-ball{
+    .toggle-ball {
         width: 1.3rem;
         height: 1.3rem;
     }
 }
 
-@media(max-width: 468px){
+@media(max-width: 468px) {
     .navbar {
         grid-template-columns: repeat(1, 1fr);
-
-
     }
-    nav ul{
+
+    nav ul {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    nav ul li{
+    nav ul li {
         grid-template-columns: repeat(3, 1fr);
         visibility: hidden;
     }
 
-    .toggle-button{
+    .toggle-button {
         height: 2rem;
     }
 
-    .toggle-btn{
+    .toggle-btn {
         width: 3.2rem;
         height: 1.7rem;
         top: -1.4.5rem;
-        left: 1rem;  
+        left: 1rem;
     }
 
-    .toggle-ball{
+    .toggle-ball {
         width: 1.3rem;
         height: 1.3rem;
     }
 }
+/* 
+/* Styles for the menu bar 
+.menu-bar {
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+.menu-bar ul {
+    display: flex;
+    justify-content: space-around; */
