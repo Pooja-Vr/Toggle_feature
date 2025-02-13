@@ -15,4 +15,21 @@ toggle.addEventListener('change', function(){
 
 })
 
+//===================== Show the scroll-up icon when scrolling
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+        document.body.classList.add('scrolled');
+    } else {
+        document.body.classList.remove('scrolled');
+    }
+});
+
+//================== Smooth scroll to contact section
+document.querySelector('.contact-btn a').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+});
+
+// Add any additional JavaScript functionality if needed
+
 

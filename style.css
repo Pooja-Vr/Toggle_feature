@@ -179,12 +179,16 @@ button {
     text-decoration: none;
 }
 
+.menu-bar {
+    display: none;
+    /* visibility: hidden; */
+}
+
 /* ========== Media query ======== */
 @media (max-width: 768px) {
     .navbar {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         padding: 1rem;
-        /* margin-bottom: 2rem; */
         align-items: center;
     }
 
@@ -200,14 +204,81 @@ button {
     .toggle-btn {
         width: 3.2rem;
         height: 1.7rem;
-        top: -1.6rem;
-        left: -2rem;
+        top: -0.01rem;
+        left: 8rem;
     }
 
     .toggle-ball {
         width: 1.3rem;
         height: 1.3rem;
     }
+
+    .toggle-menu {
+        display: none;
+    }
+
+    .menu-bar {
+        display: block;
+    ;
+    }
+
+    #checkbar {
+        display: none;
+    }
+
+    .bar-button{
+        display: none;
+        margin-left: 2rem;
+        /* left: 4rem; */
+    }
+}
+
+
+
+@media(min-width: 768px) {
+    /* .navbar {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    nav ul {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    nav ul li {
+        grid-template-columns: repeat(3, 1fr);
+        visibility: hidden;
+    } */
+
+    .toggle-button {
+        height: 2rem;
+    }
+/* 
+    .toggle-btn {
+        width: 3.2rem;
+        height: 1.7rem;
+        top: -1.4.5rem;
+        left: 1rem;
+    }
+
+    .toggle-ball {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+
+    .about-content {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .about-content img {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .about-text {
+        max-width: 600px;
+    } */
 }
 
 @media(max-width: 468px) {
@@ -240,13 +311,397 @@ button {
         height: 1.3rem;
     }
 }
-/* 
-/* Styles for the menu bar 
-.menu-bar {
-    background-color: var(--primary-color);
-    padding: 1rem;
+
+/* Styles for the About section */
+.about {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
 }
 
-.menu-bar ul {
+.about-content {
     display: flex;
-    justify-content: space-around; */
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+
+/*=========== Styles for the Skills section ==========*/
+.skills {
+    padding: 5rem 2rem;
+    background-color: #eae2e2;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    font-size: 1.2em;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .skill {
+        width: 150px;
+    }
+
+    .skill img {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+/* Styles for the Projects section */
+.projects {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.projects-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.project a {
+    font-size: 1.2em;
+    color: var(--primary-color);
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .project {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .project {
+        width: 30%;
+    }
+}
+
+/* Styles for the menu button */
+.menu-bar {
+    display: none;
+}
+
+.bar-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.bar-icon, .bar-icon::before, .bar-icon::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--text-color);
+    border-radius: 3px;
+}
+
+.bar-icon::before, .bar-icon::after {
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+.bar-icon::before {
+    transform: translateY(-8px);
+}
+
+.bar-icon::after {
+    transform: translateY(8px);
+}
+
+#checkbar:checked + .bar-button .bar-icon {
+    background: transparent;
+}
+
+#checkbar:checked + .bar-button .bar-icon::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#checkbar:checked + .bar-button .bar-icon::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+#checkbar:checked ~ .menu-links {
+    display: flex;
+}
+
+.menu-links li {
+    margin: 10px 0;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-bar {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-bar {
+        display: none;
+    }
+}
+
+/* Styles for the Contact section */
+.contact {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #1a6fa7;
+}
+
+/* Styles for the Footer section */
+.footer {
+    padding: 20px;
+    background-color: #1e7ab6;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-left {
+    margin-bottom: 20px;
+}
+
+.footer-left h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    font-size: 1em;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.social-links li {
+    margin: 0;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #b5cd54;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+    }
+
+    .footer-left {
+        margin-bottom: 0;
+    }
+}
+
+/* Styles for the scroll-up icon */
+.scroll-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+.scroll-up img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.scroll-up img:hover {
+    transform: scale(1.1);
+}
+
+/* Show the scroll-up icon when scrolling */
+body.scrolled .scroll-up {
+    display: block;
+}
