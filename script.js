@@ -25,11 +25,16 @@ window.addEventListener('scroll', function() {
 });
 
 //================== Smooth scroll to contact section
-document.querySelector('.contact-btn a').addEventListener('click', function(event) {
-    event.preventDefault();
-    document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
-});
+// document.querySelector('.contact-btn a').addEventListener('click', function(event) {
+//     event.preventDefault();
+//     document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+// });
 
-// Add any additional JavaScript functionality if needed
+// Show the menu links when the menu bar is clicked
+// document.querySelector('.bar-button').addEventListener('click', function() {
+//     this.classList.toggle('active');
+//   });
+  
+
 
 
