@@ -157,47 +157,21 @@ nav ul li a {
     transform: translateX(1.4rem);
 }
 
-/* Styles for the scroll-up icon */
-.scroll-up {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-}
-
-.scroll-up img {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.scroll-up img:hover {
-    transform: scale(1.1);
-}
-
-/* Show the scroll-up icon when scrolling */
-body.scrolled .scroll-up {
-    display: block;
-}
-
-/*=================== Styles for the menu bar =================*/
+/* Styles for the menu button */
 .menu-bar {
     display: none;
 }
 
-.bar-button {
+/* .bar-button {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     width: 30px;
-    height: 30px;
+    height: 21px;
     background: transparent;
     border: none;
     cursor: pointer;
-    font-size: 1.5rem;
-    color: var(--text-color);
-}
+} */
 
 .menu-links {
     display: none;
@@ -205,7 +179,6 @@ body.scrolled .scroll-up {
     align-items: center;
     list-style: none;
     padding: 0;
-    margin-top: 10px;
 }
 
 #checkbar:checked ~ .menu-links {
@@ -220,15 +193,6 @@ body.scrolled .scroll-up {
     text-decoration: none;
     color: var(--text-color);
     font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-.menu-links a:hover {
-    color: var(--primary-color);
-}
-
-.menu-links.show {
-    display: flex;
 }
 
 /* ======== home-info styling ========= */
@@ -237,6 +201,17 @@ body.scrolled .scroll-up {
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    height: 50vh;
+}
+
+.home-info h1{
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+}
+
+.home-info span {
+    color: var(--primary-color);
+    display: block;
 }
 
 .home-right {
@@ -261,7 +236,7 @@ button {
 }
 
 .contact-btn:hover {
-    background-color: #1a6fa7;
+    background-color:var(--bg-primary-color);
 }
 
 .contact-btn a {
@@ -269,12 +244,7 @@ button {
     text-decoration: none;
 }
 
-/* .menu-bar {
-    display: none;
-    /* visibility: hidden; */
-
-
-/*================= Styles for the About section =================*/
+/*================= Style About section =================*/
 .about {
     padding: 50px 20px;
     background-color: #f9f9f9;
@@ -286,6 +256,8 @@ button {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    max-width: 900px;
+
 }
 
 .about-content img {
@@ -310,7 +282,7 @@ button {
 }
 
 
-/*=========== Styles for the Skills section ==========*/
+/*=========== Style Skills section ==========*/
 .skills {
     padding: 5rem 2rem;
     background-color: #eae2e2;
@@ -326,7 +298,9 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 3rem;
+   
+
 }
 
 .skill {
@@ -346,7 +320,7 @@ button {
     font-size: 1.2em;
 }
 
-/* ===============  Styles Projects section ===============*/
+/* ===============  Style Projects section ===============*/
 .projects {
     padding: 50px 20px;
     background-color: #f9f9f9;
@@ -408,7 +382,7 @@ button {
     color: #fff;
 }
 
-/*===================  Styles Contact section =================*/
+/*================= Style Contact section =================*/
 .contact {
     padding: 50px 20px;
     background-color: #f9f9f9;
@@ -457,13 +431,13 @@ button {
 }
 
 .submit-btn:hover {
-    background-color: #1a6fa7;
+    background-color:var(--bg-primary-color);
 }
 
-/* Styles for the Footer section */
+/*==================== Style Footer section ================*/
 .footer {
-    padding: 20px;
-    background-color: #1e7ab6;
+    padding: 2rem;
+    background-color:var(--bg-primary-color);
     color: #fff;
     text-align: center;
 }
@@ -473,7 +447,7 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -500,7 +474,7 @@ button {
     list-style: none;
     padding: 0;
     display: flex;
-    gap: 10px;
+    gap: 1em;
 }
 
 .social-links li {
@@ -518,8 +492,167 @@ button {
     color: #b5cd54;
 }
 
-/* Responsive styles */
-@media (min-width: 769px) {
+/*============ Style scroll-up icon =========== */
+.scroll-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+.scroll-up a i{
+    font-size: 2em;
+    color: var(--primary-color);
+}
+
+.scroll-up img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.scroll-up img:hover {
+    transform: scale(1.1);
+}
+
+body.scrolled .scroll-up {
+    display: block;
+}
+
+
+
+
+
+/* ======================= Media query =================== */
+@media (max-width: 768px) {
+    .navbar {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .navbar h1 {
+     font-size: 1.5em;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    nav ul li {
+        grid-template-columns: repeat(3, 1fr);
+        visibility: hidden;
+    }
+
+    .toggle-button {
+        height: 1.8rem;
+    }
+
+    .toggle-btn {
+        width: 2.8rem;
+        height: 1.4rem;
+        top: -0.01rem;
+        left: 16rem;
+    }
+
+    .toggle-ball {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .menu-bar{
+        display: flex;
+    
+    }
+
+    #checkbar {
+        display: none;
+    }
+
+    .bar-button{
+        /* display: none; */
+    }
+
+    .bar-button i{
+        font-size: 1.4rem;
+        left: -2rem;
+    }
+
+    .home-info {
+        height: 40vh;
+    }
+
+    .home-info h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .home-info p{
+        line-height: 1.5em;
+        text-align: center;
+
+    }
+
+    .about-text h2 {
+        font-size: 1.5em;
+        margin-bottom: 1rem;
+    }
+    
+    .about-text p {
+        font-size: 1em;
+        line-height: 1.5;
+    }
+
+    .projects h2 {
+        font-size: 1.5em;
+        margin-bottom: 2rem;
+    }
+
+    .project h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .project p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    
+   .contact-content {
+      max-width: 500px;
+      margin: 0 auto;
+   }
+
+   .scroll-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+   }
+
+   .scroll-up a i{
+    font-size: 1.5em;
+  }
+}
+
+/*============== Responsive for Min-width 768px ===========*/
+@media (min-width: 768px) {
+
+    .skill {
+        width: 150px;
+    }
+
+    .skill img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .project {
+        width: 45%;
+    }
+
     .footer-content {
         flex-direction: row;
     }
@@ -528,6 +661,68 @@ button {
         margin-bottom: 0;
     }
 }
+
+
+@media(max-width: 468px) {
+    .navbar {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .navbar h1 {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    nav ul li {
+        grid-template-columns: repeat(3, 1fr);
+        visibility: hidden;
+    }
+
+    .toggle-button {
+        height: 1rem;
+    }
+
+    .toggle-btn {
+        width: 2.8rem;
+        height: 1.3rem;
+        top: -1rem;
+        left: 12rem;
+    }
+
+    .toggle-ball {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .home-info {
+        height: 40vh;
+    }
+
+
+    .scroll-up a i{
+        font-size: 1.4em;
+    }
+
+    
+    
+
+    
+}
+
+
+
+@media (min-width: 1024px) {
+    .project {
+        width: 20%;
+    }
+}
+
+
+
+
 
 
 
